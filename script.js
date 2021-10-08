@@ -1,25 +1,26 @@
-// userName = prompt('Enter name').trim().replaceAll(' ','');
-// console.log(name);
+// userName = prompt(`Enter name`);
+// userName = userName ? userName.trim() : 'not valid';
+// console.log(userName);
 
-// email = prompt('Enter email').toLowerCase().replaceAll(' ','');
-// console.log(email);
-// if(!email.startsWith('@') && !email.endsWith('@') && email.includes('@')){ 
-// 	console.log('Hello')
-// } else{
-// 	console.log('not valid');
-// }
-year = prompt('Enter your year').replaceAll(' ','');
-age = getFullYear - year;
-console.log(age);
+// email = prompt ('Enter email');
 
-
-
-// if (email.includes('@')){ // true && true
-// 	console.log('Hello')
-// } else if (email.startsWith('@')) {
-// 	console.log('not valid');
+// if (email.startsWith(`@`)) {
+//     email = `not valid email <b>${email}</b> (symbol @ find in first place)`;
+// } else if (email.endsWith(`@`)) {
+//     email = `not valid email <b>${email}</b> (symbol @ find in last place)`;
+// } else if (!email.includes(`@`)) {
+//     email = `not valid email <b>${email}</b> (symbol @ not exist)`;
 // }
 
-// q1 = prompt("Do you want fruits?").toLowerCase().replaceAll(' ','');
-// !email.endsWith('@')
-// console.log(q1);
+// console.log (email);
+
+DOB = prompt(`Enter year`);
+age = '';
+
+if (!isNaN(DOB)) {
+    age = new Date().getFullYear()-DOB; 
+}
+
+console.log (age);
+
+document.write (`<li>Age: <b>${age}</b></li>`)
